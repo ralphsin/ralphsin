@@ -17,6 +17,7 @@ I help fintech and enterprise teams design, migrate and ship production systems 
 > **18+ years** in production engineering · **Up to 95%** less deployment effort · **$15M+** cost savings delivered
 
 <a name="start-where-you-are"></a>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/headings/head-01-start-where-you-are-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/headings/head-01-start-where-you-are-light.svg">
@@ -69,6 +70,7 @@ The design is agreed and the backlog is real. You need throughput from someone w
 </details>
 
 <a name="how-the-pieces-fit"></a>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/headings/head-02-how-the-pieces-fit-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/headings/head-02-how-the-pieces-fit-light.svg">
@@ -91,6 +93,7 @@ flowchart LR
 Most engagements start at one of these four and pull in the neighbours. The loop back from operations to architecture is the part that usually gets skipped.
 
 <a name="selected-systems"></a>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/headings/head-03-selected-systems-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/headings/head-03-selected-systems-light.svg">
@@ -155,6 +158,7 @@ Event-driven serverless pipeline (Cloud Run + Cloud Tasks), planner → worker �
 *Private source repos — `cloudmorph`, `transmute`, `opsmorph`, `verbasync` — sit behind each case study; access on request.*
 
 <a name="current-engagements"></a>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/headings/head-04-current-engagements-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/headings/head-04-current-engagements-light.svg">
@@ -178,6 +182,7 @@ Event-driven serverless pipeline (Cloud Run + Cloud Tasks), planner → worker �
 ![Python](https://img.shields.io/badge/Python-C98A4B?style=flat-square) ![FastAPI](https://img.shields.io/badge/FastAPI-7FA3C9?style=flat-square) ![Gemini](https://img.shields.io/badge/Gemini-C98A4B?style=flat-square) ![Cloud Run](https://img.shields.io/badge/Cloud%20Run-7FA3C9?style=flat-square) ![Firestore](https://img.shields.io/badge/Firestore-C98A4B?style=flat-square) ![BigQuery](https://img.shields.io/badge/BigQuery-7FA3C9?style=flat-square) ![Terraform](https://img.shields.io/badge/Terraform-C98A4B?style=flat-square) ![Next.js](https://img.shields.io/badge/Next.js-7FA3C9?style=flat-square)
 
 <a name="telemetry"></a>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/headings/head-05-telemetry-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/headings/head-05-telemetry-light.svg">
@@ -191,6 +196,7 @@ Event-driven serverless pipeline (Cloud Run + Cloud Tasks), planner → worker �
 </picture>
 
 <a name="how-i-engineer"></a>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/headings/head-06-how-i-engineer-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/headings/head-06-how-i-engineer-light.svg">
@@ -206,6 +212,7 @@ Event-driven serverless pipeline (Cloud Run + Cloud Tasks), planner → worker �
 **Quality** — pytest, mypy (strict), Ruff, Playwright, Vitest
 
 <a name="contact"></a>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/headings/head-07-contact-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/headings/head-07-contact-light.svg">
