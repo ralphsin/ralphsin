@@ -32,7 +32,7 @@ You have a migration, a landing zone or a platform that has outgrown its origina
 
 **What that looks like:** current-state assessment → target architecture and control model → phased migration plan with explicit gates → reference implementation your team can extend.
 
-**Relevant work:** [Gemini Enterprise platform enablement](#gemini-enterprise-platform-enablement--major-uk-telecommunications-enterprise) (GCP landing zone, identity federation, VPC-SC for a 4,750-licence enterprise AI rollout), [CloudMorph](#cloudmorph--migration-intelligence) (AWS to GCP migration architecture).
+**Relevant work:** [Gemini Enterprise platform enablement](#gemini-enterprise-platform-enablement--major-uk-telecommunications-enterprise) (GCP landing zone, identity federation, VPC-SC for an enterprise-wide AI rollout), [CloudMorph](#cloudmorph--migration-intelligence) (AWS to GCP migration architecture).
 
 **Typical shape:** 6–12 weeks, architecture ownership plus hands-on delivery.
 
@@ -97,53 +97,62 @@ Most engagements start at one of these four and pull in the neighbours. The loop
   <img src="./assets/headings/head-03-selected-systems-light.svg" width="100%" alt="Section 03: Selected systems">
 </picture>
 
-### CloudMorph — migration intelligence
+<table>
+<tr>
+<td width="50%" valign="top">
+<a name="cloudmorph--migration-intelligence"></a>
 
-**Problem.** Serverless migration decisions were manual, inconsistent between engineers, and impossible to validate before cutover.
+**CloudMorph** — migration intelligence
 
-**Approach.** A deterministic, phase-gated pipeline that maps AWS serverless constructs to GCP-native equivalents, with explicit human review points rather than a single opaque translation step.
-
-**Result.** In production at a global quick-service restaurant chain — repeatable migration decisions with an auditable trail, and a sharp drop in the review effort per workload.
+Deterministic, phase-gated pipeline mapping AWS serverless to GCP-native services — three human approval gates, not one opaque translation step. **In production** at a global quick-service restaurant chain.
 
 ![Python 3.12](https://img.shields.io/badge/Python%203.12-C98A4B?style=flat-square) ![SQLite](https://img.shields.io/badge/SQLite-7FA3C9?style=flat-square) ![Clean Architecture](https://img.shields.io/badge/Clean%20Architecture-C98A4B?style=flat-square)
 
-[Architecture and decisions](https://github.com/ralphsin/cloudmorph-case-study) · [pinned repo](https://github.com/ralphsin/cloudmorph) (private — access on request)
+[![View case study](https://img.shields.io/badge/View%20Case%20Study-C98A4B?style=for-the-badge)](https://github.com/ralphsin/cloudmorph-case-study)
 
-### Transmute — governed conversational SQL
+</td>
+<td width="50%" valign="top">
+<a name="transmute--governed-conversational-sql"></a>
 
-**Problem.** Natural-language SQL is unreliable in production without schema discovery, validation and a hard boundary between generation and execution.
+**Transmute** — governed conversational SQL
 
-**Approach.** A schema-aware pipeline that discovers structure, generates reviewable SQL from plain English, validates it, and never lets the model execute directly.
-
-**Result.** In production at a global home-furnishings retailer — 30–40% better complex-query accuracy and 40–60% lower LLM cost versus a naive pipeline, via graph-based RAG and intelligent routing, with the review step preserved rather than automated away.
+Schema-aware NL-to-SQL pipeline with a hard boundary between generation and execution — read-only by construction, PII-masked, cost-gated. **In production** at a global home-furnishings retailer: 30–40% better query accuracy, 40–60% lower LLM cost.
 
 ![Python](https://img.shields.io/badge/Python-C98A4B?style=flat-square) ![FastAPI](https://img.shields.io/badge/FastAPI-7FA3C9?style=flat-square) ![Next.js](https://img.shields.io/badge/Next.js-C98A4B?style=flat-square) ![Gemini](https://img.shields.io/badge/Gemini-7FA3C9?style=flat-square) ![GCP](https://img.shields.io/badge/GCP-C98A4B?style=flat-square)
 
-[Architecture and decisions](https://github.com/ralphsin/transmute-case-study) · [pinned repo](https://github.com/ralphsin/transmute) (private — access on request)
+[![View case study](https://img.shields.io/badge/View%20Case%20Study-C98A4B?style=for-the-badge)](https://github.com/ralphsin/transmute-case-study)
 
-### OpsMorph — governed incident intelligence
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a name="opsmorph--governed-incident-intelligence"></a>
 
-**Problem.** Incident evidence is scattered across GitHub, Jira, logs and metrics, and reconstructing root cause is manual, slow and rarely documented anywhere reusable.
+**OpsMorph** — governed incident intelligence
 
-**Approach.** Multi-agent investigation (Google ADK) with a frozen, explainable confidence model, immutable investigation snapshots, and deterministic evaluation against a golden benchmark — governed reasoning, not an open-ended agent loop.
-
-**Result.** Built for a major US telecom operator — investigations that replay identically and carry an auditable confidence score per finding, with every downstream enrichment layer (memory, topology, noise suppression) advisory rather than load-bearing.
+Multi-agent investigation (Google ADK) with a frozen, explainable confidence model and deterministic evaluation — governed reasoning, not an open-ended agent loop. **Built for** a major US telecom operator.
 
 ![Python](https://img.shields.io/badge/Python-C98A4B?style=flat-square) ![FastAPI](https://img.shields.io/badge/FastAPI-7FA3C9?style=flat-square) ![Google ADK](https://img.shields.io/badge/Google%20ADK-C98A4B?style=flat-square) ![Vertex AI (Gemini)](https://img.shields.io/badge/Vertex%20AI%20%28Gemini%29-7FA3C9?style=flat-square) ![Firestore](https://img.shields.io/badge/Firestore-C98A4B?style=flat-square)
 
-[Architecture and decisions](https://github.com/ralphsin/opsmorph-case-study) · [pinned repo](https://github.com/ralphsin/opsmorph) (private — access on request)
+[![View case study](https://img.shields.io/badge/View%20Case%20Study-C98A4B?style=for-the-badge)](https://github.com/ralphsin/opsmorph-case-study)
 
-### VerbaSync — multilingual dubbing pipeline
+</td>
+<td width="50%" valign="top">
+<a name="verbasync--multilingual-dubbing-pipeline"></a>
 
-**Problem.** Turning long-form video into accurately translated, timing-correct dubbed output means chaining transcription, translation and synthesis without a human re-checking every handoff.
+**VerbaSync** — multilingual dubbing pipeline
 
-**Approach.** An event-driven, serverless pipeline (Cloud Run + Cloud Tasks) with a repeating planner → worker → stitcher pattern per stage, idempotent workers, and a two-phase bootstrap/deploy split that solves CI/CD's permission chicken-and-egg problem.
-
-**Result.** In production for a global telecom operator, delivered through a systems-integrator partnership — a validated transcription and translation pipeline (95%+ test coverage), with voice synthesis next on the roadmap.
+Event-driven serverless pipeline (Cloud Run + Cloud Tasks), planner → worker → stitcher per stage, two-phase bootstrap solving CI/CD's permission chicken-and-egg problem. **In production** for a global telecom operator: 95%+ test coverage.
 
 ![Python](https://img.shields.io/badge/Python-C98A4B?style=flat-square) ![FastAPI](https://img.shields.io/badge/FastAPI-7FA3C9?style=flat-square) ![Cloud Run](https://img.shields.io/badge/Cloud%20Run-C98A4B?style=flat-square) ![Cloud Tasks](https://img.shields.io/badge/Cloud%20Tasks-7FA3C9?style=flat-square) ![Terraform](https://img.shields.io/badge/Terraform-C98A4B?style=flat-square)
 
-[Architecture and decisions](https://github.com/ralphsin/verbasync-case-study) · [pinned repo](https://github.com/ralphsin/verbasync) (private — access on request)
+[![View case study](https://img.shields.io/badge/View%20Case%20Study-C98A4B?style=for-the-badge)](https://github.com/ralphsin/verbasync-case-study)
+
+</td>
+</tr>
+</table>
+
+*Private source repos — `cloudmorph`, `transmute`, `opsmorph`, `verbasync` — sit behind each case study; access on request.*
 
 <a name="current-engagements"></a>
 <picture>
@@ -154,11 +163,11 @@ Most engagements start at one of these four and pull in the neighbours. The loop
 
 ### Gemini Enterprise platform enablement — major UK telecommunications enterprise
 
-**Problem.** Rolling out an enterprise AI platform across a regulated telecom's GCP estate — 4,750 licences spanning multiple business units — means clearing identity, security and data-residency gates before a single use case goes live, with legal, privacy and security stakeholders who need to see the reasoning, not just the diagram.
+**Problem.** Rolling out an enterprise AI platform across a regulated telecom's GCP estate, spanning multiple business units, means clearing identity, security and data-residency gates before a single use case goes live, with legal, privacy and security stakeholders who need to see the reasoning, not just the diagram.
 
 **Approach.** Principal Solution Architect role: GCP landing-zone integration for Gemini Enterprise (IAM, workforce identity federation, VPC Service Controls, Model Armor guardrails, CMEK, audit and observability posture), a governance layer (group-based licence allocation, connector governance, an Umbrella SIA/PIA framework), and adoption/FinOps visibility via Looker Studio — plus a working proof of concept wiring [Transmute](#transmute--governed-conversational-sql)'s existing governed pipeline into the platform as a registered agent, rather than rebuilding its governance from scratch.
 
-**Status.** In delivery. Landing-zone and guardrail architecture cleared enterprise review; 4,750 licences provisioned across business units; adoption dashboards and reusable architecture patterns in progress. No public repo yet — this is licensing and governance architecture, not a shippable codebase; a sanitised write-up is next once the design settles.
+**Status.** In delivery. Landing-zone and guardrail architecture cleared enterprise review; licences provisioned across business units; adoption dashboards and reusable architecture patterns in progress. No public repo yet — this is licensing and governance architecture, not a shippable codebase; a sanitised write-up is next once the design settles.
 
 ![Gemini Enterprise](https://img.shields.io/badge/Gemini%20Enterprise-C98A4B?style=flat-square) ![GCP landing zone](https://img.shields.io/badge/GCP%20landing%20zone-7FA3C9?style=flat-square) ![VPC Service Controls](https://img.shields.io/badge/VPC%20Service%20Controls-C98A4B?style=flat-square) ![Workforce Identity Federation](https://img.shields.io/badge/Workforce%20Identity%20Federation-7FA3C9?style=flat-square) ![Model Armor](https://img.shields.io/badge/Model%20Armor-C98A4B?style=flat-square) ![CMEK](https://img.shields.io/badge/CMEK-7FA3C9?style=flat-square) ![Looker Studio](https://img.shields.io/badge/Looker%20Studio-C98A4B?style=flat-square)
 
