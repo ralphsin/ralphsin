@@ -1,0 +1,52 @@
+name: Refresh telemetry
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Off-peak minute on purpose — the top of the hour is the busiest slot on
+    # shared runners and scheduled jobs get queued behind everyone else's.
+    - cron: "17 4 * * 1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-telemetry
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      # Pin these to full commit SHAs before you rely on this in anger —
+      # a tag can be moved, a SHA cannot.
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip pyyaml
+
+      - name: Generate telemetry panel
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/generate_telemetry.py
+
+      - name: Validate assets
+        run: python scripts/validate_assets.py
+
+      - name: Commit only when something changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/generated/
+          if git diff --cached --quiet; then
+            echo "No telemetry change"
+            exit 0
+          fi
+          git commit -m "chore: refresh telemetry panel"
+          git push

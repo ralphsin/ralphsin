@@ -1,139 +1,166 @@
-<!-- SECTION: HERO -->
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&amp;color=gradient&amp;customColorList=6,11,20&amp;height=220&amp;section=header&amp;text=Rakesh%20Singh&amp;fontSize=52&amp;fontColor=fff&amp;animation=fadeIn&amp;fontAlignY=38&amp;desc=Freelance%20Cloud%20%26%20AI%20Engineer&amp;descAlignY=57&amp;descSize=20"/>
-</div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero/system-map-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/hero/system-map-light.svg">
+  <img src="./assets/hero/system-map-light.svg" width="100%" alt="Rakesh Singh — cloud and applied AI engineering for fintech and regulated products. 17+ years, up to 95% less deployment effort, $15M+ saved.">
+</picture>
 
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=22&amp;duration=3000&amp;pause=1000&amp;color=6AD3F7&amp;center=true&amp;vCenter=true&amp;width=650&amp;lines=17%2B+Years+of+Engineering+Excellence;Building+AI-Powered+FinTech+on+GCP;Engineering+simplicity+from+complexity"/>
-</div>
+# Cloud and applied AI engineering for regulated products
 
-<br/>
+I help fintech and enterprise teams design, migrate and ship production systems on GCP — combining platform engineering, data systems and applied AI.
 
-<!-- SECTION: SOCIAL -->
-<div align="center">
+[**Discuss an engagement**](mailto:ralphsin@gmail.com?subject=Engineering%20engagement) · [Selected systems](#selected-systems) · [LinkedIn](https://linkedin.com/in/rakesh-singh09)
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rakesh-singh09)
-[![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ralphsin@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ralphsin)
-[![Profile Views](https://komarev.com/ghpvc/?username=ralphsin&style=for-the-badge&color=6AD3F7&label=PROFILE+VIEWS)]()
+> **17+ years** in production engineering · **Up to 95%** less deployment effort · **$15M+** cost savings delivered
 
-</div>
+---
 
-<br/>
+## Start where you are
 
-<!-- SECTION: ABOUT -->
-<div align="center">
-<table>
-<tr>
-<td>
+<details>
+<summary><b>You need a cloud architect</b></summary>
 
-**17+ years** building production systems across AI, cloud, and enterprise platforms — delivering up to **95% deployment effort reduction** and **$15M+ cost savings**.
+<br>
 
-Currently freelancing for a USA-based fintech startup, building AI-powered financial platforms on GCP.
+You have a migration, a landing zone or a platform that has outgrown its original shape, and you need someone who can hold the whole system in their head while still writing the Terraform.
 
-Open to freelance engagements and remote collaborations.
+**What that looks like:** current-state assessment → target architecture and control model → phased migration plan with explicit gates → reference implementation your team can extend.
 
-</td>
-</tr>
-</table>
-</div>
+**Relevant work:** [CloudMorph](#cloudmorph--migration-intelligence) (AWS to GCP migration architecture), [VerbaSync](#verbasync--multilingual-dubbing-pipeline) (serverless landing zone, bootstrap/deploy separation).
 
-<br/>
+**Typical shape:** 6–12 weeks, architecture ownership plus hands-on delivery.
 
-<!-- SECTION: CURRENT ENGAGEMENT -->
-<div align="center">
-<table>
-<tr>
-<td>
+</details>
 
-### Current Engagement &nbsp; `Active`
+<details>
+<summary><b>You are building an AI product</b></summary>
 
-**AI-Powered Financial Application** — Freelance (2026)
+<br>
 
-Production-grade AI financial platform on GCP: LLM-driven insights, real-time pipelines, secure multi-tenant architecture.
+You have a promising demo and no path to production — the model is the easy part, and the evaluation, data controls, cost envelope and failure modes are the hard part.
 
-`Python` `FastAPI` `Gemini 2.5 Pro` `Cloud Run` `Firestore` `BigQuery` `Terraform` `Next.js`
+**What that looks like:** structured LLM pipelines with deterministic boundaries → evaluation harness before feature work → schema-aware data access → cost and latency budgets treated as requirements.
 
-</td>
-</tr>
-</table>
-</div>
+**Relevant work:** [Transmute](#transmute--governed-conversational-sql) (text-to-SQL with a validation pipeline), [OpsMorph](#opsmorph--governed-incident-intelligence) (multi-agent incident investigation with a frozen, explainable confidence model), current fintech engagement (LLM-driven insights on GCP).
 
-<br/>
+**Typical shape:** 8–16 weeks, from prototype to something you can put in front of a regulator.
 
-<!-- SECTION: PROJECTS -->
-## Shipped Projects
+</details>
 
-<table>
-<tr>
-<td width="50%">
+<details>
+<summary><b>You need someone to actually ship it</b></summary>
 
-**CloudMorph**
-> Migration intelligence — translates AWS serverless to GCP-native services via a phase-gated, deterministic pipeline.
+<br>
+
+The design is agreed and the backlog is real. You need throughput from someone who does not need onboarding to be useful.
+
+**What that looks like:** Python and FastAPI services, Terraform, CI/CD, test strategy, observability, and the unglamorous production readiness work that decides whether a launch holds.
+
+**Relevant work:** [VerbaSync](#verbasync--multilingual-dubbing-pipeline) (event-driven pipeline shipped and tested solo), plus the delivery layer of everything above.
+
+**Typical shape:** ongoing, part-time or full-time, remote.
+
+</details>
+
+---
+
+## How the pieces fit
+
+```mermaid
+flowchart LR
+    A["Architecture<br/>constraints, controls, target state"] --> B["Platform<br/>landing zones, IaC, pipelines"]
+    B --> C["Product<br/>services, data, applied AI"]
+    C --> D["Operations<br/>observability, cost, readiness"]
+    D -.->|"what production teaches"| A
+```
+
+Most engagements start at one of these four and pull in the neighbours. The loop back from operations to architecture is the part that usually gets skipped.
+
+---
+
+## Selected systems
+
+### CloudMorph — migration intelligence
+
+**Problem.** Serverless migration decisions were manual, inconsistent between engineers, and impossible to validate before cutover.
+
+**Approach.** A deterministic, phase-gated pipeline that maps AWS serverless constructs to GCP-native equivalents, with explicit human review points rather than a single opaque translation step.
+
+**Result.** In production at a global quick-service restaurant chain — repeatable migration decisions with an auditable trail, and a sharp drop in the review effort per workload.
 
 `Python 3.12` `SQLite` `Clean Architecture`
 
-</td>
-<td width="50%">
+[Architecture and decisions](https://github.com/ralphsin/cloudmorph-case-study) · [pinned repo](https://github.com/ralphsin/cloudmorph) (private — access on request)
 
-**Transmute**
-> Conversational SQL — auto-discovers schema, generates production-accurate SQL from plain English.
+### Transmute — governed conversational SQL
 
-`Python` `FastAPI` `Next.js` `Gemini 2.5 Pro` `GCP`
+**Problem.** Natural-language SQL is unreliable in production without schema discovery, validation and a hard boundary between generation and execution.
 
-</td>
-</tr>
-<tr>
-<td width="50%">
+**Approach.** A schema-aware pipeline that discovers structure, generates reviewable SQL from plain English, validates it, and never lets the model execute directly.
 
-**Kovil**
-> GCP Landing Zone blueprints for regulated industries — org hierarchy, compliance, Terraform pipelines.
+**Result.** In production at a global home-furnishings retailer — analyst-grade queries from non-technical users, with the review step preserved rather than automated away.
 
-`Terraform` `GCP` `Cloud Build`
+`Python` `FastAPI` `Next.js` `Gemini` `GCP`
 
-</td>
-<td width="50%">
+[Architecture and decisions](https://github.com/ralphsin/transmute-case-study) · [pinned repo](https://github.com/ralphsin/transmute) (private — access on request)
 
-**FileFlow**
-> Scalable file processing backend with pluggable handlers for high-volume workloads.
+### OpsMorph — governed incident intelligence
 
-`Python` `FastAPI`
+**Problem.** Incident evidence is scattered across GitHub, Jira, logs and metrics, and reconstructing root cause is manual, slow and rarely documented anywhere reusable.
 
-</td>
-</tr>
-</table>
+**Approach.** Multi-agent investigation (Google ADK) with a frozen, explainable confidence model, immutable investigation snapshots, and deterministic evaluation against a golden benchmark — governed reasoning, not an open-ended agent loop.
 
-<br/>
+**Result.** Built for a major US telecom operator — investigations that replay identically and carry an auditable confidence score per finding, with every downstream enrichment layer (memory, topology, noise suppression) advisory rather than load-bearing.
 
-<!-- SECTION: TECH STACK -->
-## Tech DNA
+`Python` `FastAPI` `Google ADK` `Vertex AI (Gemini)` `Firestore`
 
-```
-╔══════════════════════════════════════════════════════════════════════╗
-║                                                                      ║
-║   CLOUD & INFRA    ║  GCP · Terraform · Docker · Cloud Build · Linux ║
-║   ─────────────    ║                                                  ║
-║   BACKEND          ║  Python · FastAPI · SQLite                       ║
-║   ─────────────    ║                                                  ║
-║   FRONTEND         ║  TypeScript · Next.js · React · Tailwind CSS    ║
-║   ─────────────    ║                                                  ║
-║   AI / LLM         ║  Gemini 2.5 Pro · LLM Pipelines · Text-to-SQL  ║
-║   ─────────────    ║                                                  ║
-║   ARCHITECTURE     ║  Clean Architecture · IaC · Artifact Pipelines  ║
-║   ─────────────    ║                                                  ║
-║   QUALITY          ║  pytest · mypy (strict) · Ruff · Playwright     ║
-║                    ║  Vitest                                          ║
-║                                                                      ║
-╚══════════════════════════════════════════════════════════════════════╝
-```
+[Architecture and decisions](https://github.com/ralphsin/opsmorph-case-study) · [pinned repo](https://github.com/ralphsin/opsmorph) (private — access on request)
 
-<br/>
+### VerbaSync — multilingual dubbing pipeline
 
-<!-- SECTION: FOOTER -->
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&amp;color=gradient&amp;customColorList=6,11,20&amp;height=120&amp;section=footer"/>
-</div>
+**Problem.** Turning long-form video into accurately translated, timing-correct dubbed output means chaining transcription, translation and synthesis without a human re-checking every handoff.
 
-<div align="center">
-<sub>Architecting cloud infrastructure since 2009 — open to interesting problems.</sub>
-</div>
+**Approach.** An event-driven, serverless pipeline (Cloud Run + Cloud Tasks) with a repeating planner → worker → stitcher pattern per stage, idempotent workers, and a two-phase bootstrap/deploy split that solves CI/CD's permission chicken-and-egg problem.
+
+**Result.** In production for a global telecom operator, delivered through a systems-integrator partnership — a validated transcription and translation pipeline (95%+ test coverage), with voice synthesis next on the roadmap.
+
+`Python` `FastAPI` `Cloud Run` `Cloud Tasks` `Terraform`
+
+[Architecture and decisions](https://github.com/ralphsin/verbasync-case-study) · [pinned repo](https://github.com/ralphsin/verbasync) (private — access on request)
+
+---
+
+## Current engagement
+
+Building a production-grade, multi-tenant financial application on GCP for a US fintech: LLM-driven insights, real-time pipelines, and infrastructure automation under regulated-data constraints.
+
+`Python` `FastAPI` `Gemini` `Cloud Run` `Firestore` `BigQuery` `Terraform` `Next.js`
+
+---
+
+## Telemetry
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/generated/telemetry-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/generated/telemetry-light.svg">
+  <img src="./assets/generated/telemetry-light.svg" width="100%" alt="Weekly-refreshed panel showing current focus, active stack and recent public activity.">
+</picture>
+
+---
+
+## How I engineer
+
+`Deterministic where possible` · `Observable by design` · `Infrastructure as code` · `Secure defaults` · `Explicit quality gates` · `Simple operational models`
+
+**Cloud and infrastructure** — GCP, Terraform, Docker, Cloud Build, Linux
+**Backend and data** — Python, FastAPI, BigQuery, Firestore, SQLite
+**Applied AI** — Gemini, structured LLM pipelines, text-to-SQL, evaluation
+**Frontend** — TypeScript, Next.js, React, Tailwind
+**Quality** — pytest, mypy (strict), Ruff, Playwright, Vitest
+
+---
+
+## Contact
+
+Open to selected remote engagements involving cloud platforms, data systems and applied AI.
+
+[**Start a technical conversation →**](mailto:ralphsin@gmail.com?subject=Engineering%20engagement)
