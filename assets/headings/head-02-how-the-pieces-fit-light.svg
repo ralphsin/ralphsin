@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 96" width="1200" height="96" role="img" aria-labelledby="h02">
+<title id="h02">Section 02: How the pieces fit</title>
+<style>.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono","DejaVu Sans Mono",monospace}.sans{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,"Liberation Sans",sans-serif}</style>
+<text class="mono" x="0" y="22" font-size="13" letter-spacing="2" fill="#8B4F1F">&#167; 02</text>
+<text class="mono" x="52" y="22" font-size="13" letter-spacing="2.2" fill="#5C6672">&#8212; HOW THE PIECES FIT</text>
+<text class="sans" x="0" y="72" font-size="40" font-weight="700" fill="#131920">How the pieces fit</text>
+<line x1="0" y1="88" x2="1180" y2="88" stroke="#A85A2A" stroke-width="1.5" opacity="0.55"/>
+</svg>

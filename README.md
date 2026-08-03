@@ -1,24 +1,27 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/hero/system-map-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/hero/system-map-light.svg">
-  <img src="./assets/hero/system-map-light.svg" width="100%" alt="Rakesh Singh — cloud and applied AI engineering for fintech and regulated products. 17+ years, up to 95% less deployment effort, $15M+ saved.">
+  <img src="./assets/hero/system-map-light.svg" width="100%" alt="Rakesh Singh — cloud and applied AI engineering for fintech and regulated products. 18+ years, up to 95% less deployment effort, $15M+ saved.">
 </picture>
 
-# Cloud and applied AI engineering for regulated products
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/headings/title-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/headings/title-light.svg">
+  <img src="./assets/headings/title-light.svg" width="100%" alt="Cloud and applied AI engineering for regulated products">
+</picture>
 
 I help fintech and enterprise teams design, migrate and ship production systems on GCP — combining platform engineering, data systems and applied AI.
 
 [**Discuss an engagement**](mailto:ralphsin@gmail.com?subject=Engineering%20engagement) · [Selected systems](#selected-systems) · [LinkedIn](https://linkedin.com/in/rakesh-singh09)
 
-> **17+ years** in production engineering · **Up to 95%** less deployment effort · **$15M+** cost savings delivered
+> **18+ years** in production engineering · **Up to 95%** less deployment effort · **$15M+** cost savings delivered
 
+<a name="start-where-you-are"></a>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/dividers/div-01-start-where-you-are-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/dividers/div-01-start-where-you-are-light.svg">
-  <img src="./assets/dividers/div-01-start-where-you-are-light.svg" width="100%" alt="Section 01: Start Where You Are">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/headings/head-01-start-where-you-are-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/headings/head-01-start-where-you-are-light.svg">
+  <img src="./assets/headings/head-01-start-where-you-are-light.svg" width="100%" alt="Section 01: Start where you are">
 </picture>
-
-## Start where you are
 
 <details>
 <summary><b>You need a cloud architect</b></summary>
@@ -65,13 +68,12 @@ The design is agreed and the backlog is real. You need throughput from someone w
 
 </details>
 
+<a name="how-the-pieces-fit"></a>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/dividers/div-02-how-the-pieces-fit-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/dividers/div-02-how-the-pieces-fit-light.svg">
-  <img src="./assets/dividers/div-02-how-the-pieces-fit-light.svg" width="100%" alt="Section 02: How The Pieces Fit">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/headings/head-02-how-the-pieces-fit-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/headings/head-02-how-the-pieces-fit-light.svg">
+  <img src="./assets/headings/head-02-how-the-pieces-fit-light.svg" width="100%" alt="Section 02: How the pieces fit">
 </picture>
-
-## How the pieces fit
 
 ```mermaid
 flowchart LR
@@ -88,13 +90,12 @@ flowchart LR
 
 Most engagements start at one of these four and pull in the neighbours. The loop back from operations to architecture is the part that usually gets skipped.
 
+<a name="selected-systems"></a>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/dividers/div-03-selected-systems-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/dividers/div-03-selected-systems-light.svg">
-  <img src="./assets/dividers/div-03-selected-systems-light.svg" width="100%" alt="Section 03: Selected Systems">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/headings/head-03-selected-systems-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/headings/head-03-selected-systems-light.svg">
+  <img src="./assets/headings/head-03-selected-systems-light.svg" width="100%" alt="Section 03: Selected systems">
 </picture>
-
-## Selected systems
 
 ### CloudMorph — migration intelligence
 
@@ -144,13 +145,12 @@ Most engagements start at one of these four and pull in the neighbours. The loop
 
 [Architecture and decisions](https://github.com/ralphsin/verbasync-case-study) · [pinned repo](https://github.com/ralphsin/verbasync) (private — access on request)
 
+<a name="current-engagements"></a>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/dividers/div-04-current-engagements-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/dividers/div-04-current-engagements-light.svg">
-  <img src="./assets/dividers/div-04-current-engagements-light.svg" width="100%" alt="Section 04: Current Engagements">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/headings/head-04-current-engagements-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/headings/head-04-current-engagements-light.svg">
+  <img src="./assets/headings/head-04-current-engagements-light.svg" width="100%" alt="Section 04: Current engagements">
 </picture>
-
-## Current engagements
 
 ### Gemini Enterprise platform enablement — major UK telecommunications enterprise
 
@@ -168,13 +168,12 @@ Most engagements start at one of these four and pull in the neighbours. The loop
 
 ![Python](https://img.shields.io/badge/Python-C98A4B?style=flat-square) ![FastAPI](https://img.shields.io/badge/FastAPI-7FA3C9?style=flat-square) ![Gemini](https://img.shields.io/badge/Gemini-C98A4B?style=flat-square) ![Cloud Run](https://img.shields.io/badge/Cloud%20Run-7FA3C9?style=flat-square) ![Firestore](https://img.shields.io/badge/Firestore-C98A4B?style=flat-square) ![BigQuery](https://img.shields.io/badge/BigQuery-7FA3C9?style=flat-square) ![Terraform](https://img.shields.io/badge/Terraform-C98A4B?style=flat-square) ![Next.js](https://img.shields.io/badge/Next.js-7FA3C9?style=flat-square)
 
+<a name="telemetry"></a>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/dividers/div-05-telemetry-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/dividers/div-05-telemetry-light.svg">
-  <img src="./assets/dividers/div-05-telemetry-light.svg" width="100%" alt="Section 05: Telemetry">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/headings/head-05-telemetry-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/headings/head-05-telemetry-light.svg">
+  <img src="./assets/headings/head-05-telemetry-light.svg" width="100%" alt="Section 05: Telemetry">
 </picture>
-
-## Telemetry
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/generated/telemetry-dark.svg">
@@ -182,13 +181,12 @@ Most engagements start at one of these four and pull in the neighbours. The loop
   <img src="./assets/generated/telemetry-light.svg" width="100%" alt="Weekly-refreshed panel showing current focus, active stack and recent public activity.">
 </picture>
 
+<a name="how-i-engineer"></a>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/dividers/div-06-how-i-engineer-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/dividers/div-06-how-i-engineer-light.svg">
-  <img src="./assets/dividers/div-06-how-i-engineer-light.svg" width="100%" alt="Section 06: How I Engineer">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/headings/head-06-how-i-engineer-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/headings/head-06-how-i-engineer-light.svg">
+  <img src="./assets/headings/head-06-how-i-engineer-light.svg" width="100%" alt="Section 06: How I engineer">
 </picture>
-
-## How I engineer
 
 ![Deterministic where possible](https://img.shields.io/badge/Deterministic%20where%20possible-C98A4B?style=flat-square) ![Observable by design](https://img.shields.io/badge/Observable%20by%20design-7FA3C9?style=flat-square) ![Infrastructure as code](https://img.shields.io/badge/Infrastructure%20as%20code-C98A4B?style=flat-square) ![Secure defaults](https://img.shields.io/badge/Secure%20defaults-7FA3C9?style=flat-square) ![Explicit quality gates](https://img.shields.io/badge/Explicit%20quality%20gates-C98A4B?style=flat-square) ![Simple operational models](https://img.shields.io/badge/Simple%20operational%20models-7FA3C9?style=flat-square)
 
@@ -198,13 +196,12 @@ Most engagements start at one of these four and pull in the neighbours. The loop
 **Frontend** — TypeScript, Next.js, React, Tailwind
 **Quality** — pytest, mypy (strict), Ruff, Playwright, Vitest
 
+<a name="contact"></a>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/dividers/div-07-contact-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/dividers/div-07-contact-light.svg">
-  <img src="./assets/dividers/div-07-contact-light.svg" width="100%" alt="Section 07: Contact">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/headings/head-07-contact-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/headings/head-07-contact-light.svg">
+  <img src="./assets/headings/head-07-contact-light.svg" width="100%" alt="Section 07: Contact">
 </picture>
-
-## Contact
 
 Open to selected remote engagements involving cloud platforms, data systems and applied AI.
 

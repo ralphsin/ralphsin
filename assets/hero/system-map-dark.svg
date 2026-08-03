@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" width="1200" height="430" role="img" aria-labelledby="title desc">
 <title id="title">Rakesh Singh — cloud and applied AI engineering for fintech and regulated products</title>
-<desc id="desc">An engineering-drawing style system map. An orchestrator node feeds three roles — architect, AI engineer and operator — which converge on a bus feeding four shipped systems: CloudMorph, Transmute, OpsMorph and VerbaSync. Proof chips read: 17 plus years, 95 percent less deployment effort, 15 million dollars plus saved.</desc>
+<desc id="desc">An engineering-drawing style system map. An orchestrator node feeds three roles — architect, AI engineer and operator — which converge on a bus feeding four shipped systems: CloudMorph, Transmute, OpsMorph and VerbaSync. Proof chips read: 18 plus years, 95 percent less deployment effort, 15 million dollars plus saved.</desc>
 <defs>
 <style>
 .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono","DejaVu Sans Mono",monospace}
@@ -56,7 +56,7 @@
 
 <g>
 <rect x="80" y="270" width="140" height="56" rx="3" fill="#151B23" stroke="#3A3226" stroke-width="1"/>
-<text class="mono" x="96" y="300" font-size="21" font-weight="700" fill="#E6AC6B">17+</text>
+<text class="mono" x="96" y="300" font-size="21" font-weight="700" fill="#E6AC6B">18+</text>
 <text class="mono" x="96" y="317" font-size="10" letter-spacing="1" fill="#808B99">YEARS</text>
 
 <rect x="232" y="270" width="176" height="56" rx="3" fill="#151B23" stroke="#3A3226" stroke-width="1"/>
