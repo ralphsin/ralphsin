@@ -1,8 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 96" width="1200" height="96" role="img" aria-labelledby="h01">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 58" width="1200" height="58" role="img" aria-labelledby="h01">
 <title id="h01">Section 01: Start where you are</title>
-<style>.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono","DejaVu Sans Mono",monospace}.sans{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,"Liberation Sans",sans-serif}</style>
-<text class="mono" x="0" y="22" font-size="13" letter-spacing="2" fill="#E6AC6B">&#167; 01</text>
-<text class="mono" x="52" y="22" font-size="13" letter-spacing="2.2" fill="#9AA5B4">&#8212; START WHERE YOU ARE</text>
-<text class="sans" x="0" y="72" font-size="40" font-weight="700" fill="#E9EDF2">Start where you are</text>
-<line x1="0" y1="88" x2="1180" y2="88" stroke="#C98A4B" stroke-width="1.5" opacity="0.55"/>
+<style>.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono","DejaVu Sans Mono",monospace}</style>
+<text class="mono" x="0" y="38" font-size="34" font-weight="700" letter-spacing="1" fill="#E6AC6B">&#167; 01</text>
+<text class="mono" x="104" y="38" font-size="34" font-weight="700" letter-spacing="1" fill="#E9EDF2">&#8212; START WHERE YOU ARE</text>
+<line x1="0" y1="50" x2="1180" y2="50" stroke="#C98A4B" stroke-width="1.5" opacity="0.55"/>
 </svg>
