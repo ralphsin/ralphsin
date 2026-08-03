@@ -28,26 +28,29 @@ API = "https://api.github.com"
 
 THEMES = {
     "dark": {
-        "bg": "#07090C",
-        "grid": "#111A21",
-        "rule": "#1C242B",
-        "label": "#5C6E77",
-        "value": "#E4ECEF",
-        "accent": "#22D3EE",
-        "tile": "#0B1116",
-        "tile_stroke": "#1A222A",
+        "bg": "#0B0E13",
+        "grid": "#161C24",
+        "rule": "#232A33",
+        "label": "#808B99",
+        "value": "#E9EDF2",
+        "accent": "#C98A4B",
+        "accent2": "#7FA3C9",
+        "tile": "#151B23",
+        "tile_stroke": "#3A3226",
     },
     "light": {
-        "bg": "#FBFCFD",
-        "grid": "#EDF1F4",
-        "rule": "#DDE4E9",
-        "label": "#77878F",
-        "value": "#101C22",
-        "accent": "#0E7490",
-        "tile": "#F4F7F9",
-        "tile_stroke": "#DFE6EB",
+        "bg": "#EEF1F3",
+        "grid": "#DBE1E6",
+        "rule": "#D8DEE3",
+        "label": "#7A8390",
+        "value": "#131920",
+        "accent": "#A85A2A",
+        "accent2": "#3E6690",
+        "tile": "#FFFFFF",
+        "tile_stroke": "#DCC8B0",
     },
 }
+ACCENT_CYCLE = ("accent", "accent2", "accent")
 
 WIDTH, HEIGHT = 1200, 168
 COL_W = 320
@@ -131,25 +134,29 @@ def render(theme_name: str, cells: list[tuple[str, str]], stamp: str) -> str:
         "</defs>",
         f'<rect width="{WIDTH}" height="{HEIGHT}" fill="{t["bg"]}"/>',
         f'<rect width="{WIDTH}" height="{HEIGHT}" fill="url(#g)"/>',
-        f'<rect x="0" y="0" width="{WIDTH}" height="2" fill="{t["accent"]}" opacity="0.55"/>',
+        f'<rect x="0" y="0" width="{WIDTH}" height="2" fill="{t["accent"]}" opacity="0.7"/>',
+        f'<path d="M18 26 L18 14 L30 14" fill="none" stroke="{t["accent"]}" stroke-width="1.2"/>',
         f'<circle cx="72" cy="36" r="4" fill="{t["accent"]}" class="blip"/>',
-        f'<text class="mono" x="88" y="41" font-size="15" fill="{t["label"]}">telemetry</text>',
+        f'<text class="mono" x="88" y="41" font-size="15" letter-spacing="1" '
+        f'fill="{t["label"]}">TELEMETRY</text>',
         f'<text class="mono" x="{WIDTH - 60}" y="41" font-size="14" fill="{t["label"]}" '
         f'text-anchor="end">refreshed {escape(stamp)}</text>',
         f'<line x1="60" y1="60" x2="{WIDTH - 60}" y2="60" stroke="{t["rule"]}" stroke-width="1"/>',
     ]
 
-    for x, (label, value) in zip(COLS, cells):
+    for i, (x, (label, value)) in enumerate(zip(COLS, cells)):
+        col = t[ACCENT_CYCLE[i % len(ACCENT_CYCLE)]]
         parts.append(
-            f'<rect x="{x}" y="78" width="{COL_W}" height="62" rx="6" '
+            f'<rect x="{x}" y="78" width="{COL_W}" height="62" rx="3" '
             f'fill="{t["tile"]}" stroke="{t["tile_stroke"]}" stroke-width="1"/>'
         )
+        parts.append(f'<rect x="{x}" y="78" width="3" height="62" fill="{col}"/>')
         parts.append(
-            f'<text class="mono" x="{x + 18}" y="102" font-size="14" '
-            f'fill="{t["label"]}">{escape(label)}</text>'
+            f'<text class="mono" x="{x + 20}" y="100" font-size="11" letter-spacing="1.5" '
+            f'fill="{col}">{escape(label.upper())}</text>'
         )
         parts.append(
-            f'<text class="mono" x="{x + 18}" y="128" font-size="17" '
+            f'<text class="mono" x="{x + 20}" y="126" font-size="18" '
             f'fill="{t["value"]}">{escape(truncate(value))}</text>'
         )
 

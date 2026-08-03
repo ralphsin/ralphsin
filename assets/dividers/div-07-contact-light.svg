@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 30" width="1200" height="30" role="img" aria-labelledby="t07">
+<title id="t07">Section 07: Contact</title>
+<style>.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono","DejaVu Sans Mono",monospace}</style>
+<text class="mono" x="0" y="20" font-size="13" letter-spacing="2" fill="#8B4F1F">&#167; 07</text>
+<text class="mono" x="52" y="20" font-size="13" letter-spacing="2.2" fill="#5C6672">&#8212; CONTACT</text>
+<line x1="330" y1="15" x2="1180" y2="15" stroke="#D4D9DE" stroke-width="1"/>
+<path d="M1180 9 L1192 9 M1192 9 L1192 21" fill="none" stroke="#A85A2A" stroke-width="1.2"/>
+</svg>

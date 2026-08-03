@@ -12,7 +12,11 @@ I help fintech and enterprise teams design, migrate and ship production systems 
 
 > **17+ years** in production engineering · **Up to 95%** less deployment effort · **$15M+** cost savings delivered
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/dividers/div-01-start-where-you-are-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/dividers/div-01-start-where-you-are-light.svg">
+  <img src="./assets/dividers/div-01-start-where-you-are-light.svg" width="100%" alt="Section 01: Start Where You Are">
+</picture>
 
 ## Start where you are
 
@@ -25,7 +29,7 @@ You have a migration, a landing zone or a platform that has outgrown its origina
 
 **What that looks like:** current-state assessment → target architecture and control model → phased migration plan with explicit gates → reference implementation your team can extend.
 
-**Relevant work:** [CloudMorph](#cloudmorph--migration-intelligence) (AWS to GCP migration architecture), [VerbaSync](#verbasync--multilingual-dubbing-pipeline) (serverless landing zone, bootstrap/deploy separation).
+**Relevant work:** [Gemini Enterprise platform enablement](#gemini-enterprise-platform-enablement--major-uk-telecommunications-enterprise) (GCP landing zone, identity federation, VPC-SC for a 4,750-licence enterprise AI rollout), [CloudMorph](#cloudmorph--migration-intelligence) (AWS to GCP migration architecture).
 
 **Typical shape:** 6–12 weeks, architecture ownership plus hands-on delivery.
 
@@ -61,7 +65,11 @@ The design is agreed and the backlog is real. You need throughput from someone w
 
 </details>
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/dividers/div-02-how-the-pieces-fit-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/dividers/div-02-how-the-pieces-fit-light.svg">
+  <img src="./assets/dividers/div-02-how-the-pieces-fit-light.svg" width="100%" alt="Section 02: How The Pieces Fit">
+</picture>
 
 ## How the pieces fit
 
@@ -71,11 +79,20 @@ flowchart LR
     B --> C["Product<br/>services, data, applied AI"]
     C --> D["Operations<br/>observability, cost, readiness"]
     D -.->|"what production teaches"| A
+
+    style A fill:#151B23,stroke:#C98A4B,stroke-width:2px,color:#E9EDF2
+    style B fill:#151B23,stroke:#7FA3C9,stroke-width:2px,color:#E9EDF2
+    style C fill:#151B23,stroke:#C98A4B,stroke-width:2px,color:#E9EDF2
+    style D fill:#151B23,stroke:#7FA3C9,stroke-width:2px,color:#E9EDF2
 ```
 
 Most engagements start at one of these four and pull in the neighbours. The loop back from operations to architecture is the part that usually gets skipped.
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/dividers/div-03-selected-systems-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/dividers/div-03-selected-systems-light.svg">
+  <img src="./assets/dividers/div-03-selected-systems-light.svg" width="100%" alt="Section 03: Selected Systems">
+</picture>
 
 ## Selected systems
 
@@ -87,7 +104,7 @@ Most engagements start at one of these four and pull in the neighbours. The loop
 
 **Result.** In production at a global quick-service restaurant chain — repeatable migration decisions with an auditable trail, and a sharp drop in the review effort per workload.
 
-`Python 3.12` `SQLite` `Clean Architecture`
+![Python 3.12](https://img.shields.io/badge/Python%203.12-C98A4B?style=flat-square) ![SQLite](https://img.shields.io/badge/SQLite-7FA3C9?style=flat-square) ![Clean Architecture](https://img.shields.io/badge/Clean%20Architecture-C98A4B?style=flat-square)
 
 [Architecture and decisions](https://github.com/ralphsin/cloudmorph-case-study) · [pinned repo](https://github.com/ralphsin/cloudmorph) (private — access on request)
 
@@ -97,9 +114,9 @@ Most engagements start at one of these four and pull in the neighbours. The loop
 
 **Approach.** A schema-aware pipeline that discovers structure, generates reviewable SQL from plain English, validates it, and never lets the model execute directly.
 
-**Result.** In production at a global home-furnishings retailer — analyst-grade queries from non-technical users, with the review step preserved rather than automated away.
+**Result.** In production at a global home-furnishings retailer — 30–40% better complex-query accuracy and 40–60% lower LLM cost versus a naive pipeline, via graph-based RAG and intelligent routing, with the review step preserved rather than automated away.
 
-`Python` `FastAPI` `Next.js` `Gemini` `GCP`
+![Python](https://img.shields.io/badge/Python-C98A4B?style=flat-square) ![FastAPI](https://img.shields.io/badge/FastAPI-7FA3C9?style=flat-square) ![Next.js](https://img.shields.io/badge/Next.js-C98A4B?style=flat-square) ![Gemini](https://img.shields.io/badge/Gemini-7FA3C9?style=flat-square) ![GCP](https://img.shields.io/badge/GCP-C98A4B?style=flat-square)
 
 [Architecture and decisions](https://github.com/ralphsin/transmute-case-study) · [pinned repo](https://github.com/ralphsin/transmute) (private — access on request)
 
@@ -111,7 +128,7 @@ Most engagements start at one of these four and pull in the neighbours. The loop
 
 **Result.** Built for a major US telecom operator — investigations that replay identically and carry an auditable confidence score per finding, with every downstream enrichment layer (memory, topology, noise suppression) advisory rather than load-bearing.
 
-`Python` `FastAPI` `Google ADK` `Vertex AI (Gemini)` `Firestore`
+![Python](https://img.shields.io/badge/Python-C98A4B?style=flat-square) ![FastAPI](https://img.shields.io/badge/FastAPI-7FA3C9?style=flat-square) ![Google ADK](https://img.shields.io/badge/Google%20ADK-C98A4B?style=flat-square) ![Vertex AI (Gemini)](https://img.shields.io/badge/Vertex%20AI%20%28Gemini%29-7FA3C9?style=flat-square) ![Firestore](https://img.shields.io/badge/Firestore-C98A4B?style=flat-square)
 
 [Architecture and decisions](https://github.com/ralphsin/opsmorph-case-study) · [pinned repo](https://github.com/ralphsin/opsmorph) (private — access on request)
 
@@ -123,19 +140,39 @@ Most engagements start at one of these four and pull in the neighbours. The loop
 
 **Result.** In production for a global telecom operator, delivered through a systems-integrator partnership — a validated transcription and translation pipeline (95%+ test coverage), with voice synthesis next on the roadmap.
 
-`Python` `FastAPI` `Cloud Run` `Cloud Tasks` `Terraform`
+![Python](https://img.shields.io/badge/Python-C98A4B?style=flat-square) ![FastAPI](https://img.shields.io/badge/FastAPI-7FA3C9?style=flat-square) ![Cloud Run](https://img.shields.io/badge/Cloud%20Run-C98A4B?style=flat-square) ![Cloud Tasks](https://img.shields.io/badge/Cloud%20Tasks-7FA3C9?style=flat-square) ![Terraform](https://img.shields.io/badge/Terraform-C98A4B?style=flat-square)
 
 [Architecture and decisions](https://github.com/ralphsin/verbasync-case-study) · [pinned repo](https://github.com/ralphsin/verbasync) (private — access on request)
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/dividers/div-04-current-engagements-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/dividers/div-04-current-engagements-light.svg">
+  <img src="./assets/dividers/div-04-current-engagements-light.svg" width="100%" alt="Section 04: Current Engagements">
+</picture>
 
-## Current engagement
+## Current engagements
 
-Building a production-grade, multi-tenant financial application on GCP for a US fintech: LLM-driven insights, real-time pipelines, and infrastructure automation under regulated-data constraints.
+### Gemini Enterprise platform enablement — major UK telecommunications enterprise
 
-`Python` `FastAPI` `Gemini` `Cloud Run` `Firestore` `BigQuery` `Terraform` `Next.js`
+**Problem.** Rolling out an enterprise AI platform across a regulated telecom's GCP estate — 4,750 licences spanning multiple business units — means clearing identity, security and data-residency gates before a single use case goes live, with legal, privacy and security stakeholders who need to see the reasoning, not just the diagram.
 
----
+**Approach.** Principal Solution Architect role: GCP landing-zone integration for Gemini Enterprise (IAM, workforce identity federation, VPC Service Controls, Model Armor guardrails, CMEK, audit and observability posture), a governance layer (group-based licence allocation, connector governance, an Umbrella SIA/PIA framework), and adoption/FinOps visibility via Looker Studio — plus a working proof of concept wiring [Transmute](#transmute--governed-conversational-sql)'s existing governed pipeline into the platform as a registered agent, rather than rebuilding its governance from scratch.
+
+**Status.** In delivery. Landing-zone and guardrail architecture cleared enterprise review; 4,750 licences provisioned across business units; adoption dashboards and reusable architecture patterns in progress. No public repo yet — this is licensing and governance architecture, not a shippable codebase; a sanitised write-up is next once the design settles.
+
+![Gemini Enterprise](https://img.shields.io/badge/Gemini%20Enterprise-C98A4B?style=flat-square) ![GCP landing zone](https://img.shields.io/badge/GCP%20landing%20zone-7FA3C9?style=flat-square) ![VPC Service Controls](https://img.shields.io/badge/VPC%20Service%20Controls-C98A4B?style=flat-square) ![Workforce Identity Federation](https://img.shields.io/badge/Workforce%20Identity%20Federation-7FA3C9?style=flat-square) ![Model Armor](https://img.shields.io/badge/Model%20Armor-C98A4B?style=flat-square) ![CMEK](https://img.shields.io/badge/CMEK-7FA3C9?style=flat-square) ![Looker Studio](https://img.shields.io/badge/Looker%20Studio-C98A4B?style=flat-square)
+
+### Multi-tenant fintech platform — US fintech
+
+**Problem/Approach.** Building a production-grade, multi-tenant financial application on GCP: LLM-driven insights, real-time pipelines, and infrastructure automation under regulated-data constraints.
+
+![Python](https://img.shields.io/badge/Python-C98A4B?style=flat-square) ![FastAPI](https://img.shields.io/badge/FastAPI-7FA3C9?style=flat-square) ![Gemini](https://img.shields.io/badge/Gemini-C98A4B?style=flat-square) ![Cloud Run](https://img.shields.io/badge/Cloud%20Run-7FA3C9?style=flat-square) ![Firestore](https://img.shields.io/badge/Firestore-C98A4B?style=flat-square) ![BigQuery](https://img.shields.io/badge/BigQuery-7FA3C9?style=flat-square) ![Terraform](https://img.shields.io/badge/Terraform-C98A4B?style=flat-square) ![Next.js](https://img.shields.io/badge/Next.js-7FA3C9?style=flat-square)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/dividers/div-05-telemetry-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/dividers/div-05-telemetry-light.svg">
+  <img src="./assets/dividers/div-05-telemetry-light.svg" width="100%" alt="Section 05: Telemetry">
+</picture>
 
 ## Telemetry
 
@@ -145,19 +182,27 @@ Building a production-grade, multi-tenant financial application on GCP for a US 
   <img src="./assets/generated/telemetry-light.svg" width="100%" alt="Weekly-refreshed panel showing current focus, active stack and recent public activity.">
 </picture>
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/dividers/div-06-how-i-engineer-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/dividers/div-06-how-i-engineer-light.svg">
+  <img src="./assets/dividers/div-06-how-i-engineer-light.svg" width="100%" alt="Section 06: How I Engineer">
+</picture>
 
 ## How I engineer
 
-`Deterministic where possible` · `Observable by design` · `Infrastructure as code` · `Secure defaults` · `Explicit quality gates` · `Simple operational models`
+![Deterministic where possible](https://img.shields.io/badge/Deterministic%20where%20possible-C98A4B?style=flat-square) ![Observable by design](https://img.shields.io/badge/Observable%20by%20design-7FA3C9?style=flat-square) ![Infrastructure as code](https://img.shields.io/badge/Infrastructure%20as%20code-C98A4B?style=flat-square) ![Secure defaults](https://img.shields.io/badge/Secure%20defaults-7FA3C9?style=flat-square) ![Explicit quality gates](https://img.shields.io/badge/Explicit%20quality%20gates-C98A4B?style=flat-square) ![Simple operational models](https://img.shields.io/badge/Simple%20operational%20models-7FA3C9?style=flat-square)
 
 **Cloud and infrastructure** — GCP, Terraform, Docker, Cloud Build, Linux
 **Backend and data** — Python, FastAPI, BigQuery, Firestore, SQLite
-**Applied AI** — Gemini, structured LLM pipelines, text-to-SQL, evaluation
+**Applied AI** — Gemini, Gemini Enterprise, structured LLM pipelines, text-to-SQL, evaluation
 **Frontend** — TypeScript, Next.js, React, Tailwind
 **Quality** — pytest, mypy (strict), Ruff, Playwright, Vitest
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/dividers/div-07-contact-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/dividers/div-07-contact-light.svg">
+  <img src="./assets/dividers/div-07-contact-light.svg" width="100%" alt="Section 07: Contact">
+</picture>
 
 ## Contact
 

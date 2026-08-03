@@ -1,12 +1,12 @@
 username: ralphsin
 
 # Keep both of these at 26 characters or fewer, or they get ellipsised.
-current_focus: "Fintech platform on GCP"
+current_focus: "Gemini Enterprise on GCP"
 
-active_stack: "Python · Gemini · GCP"
+active_stack: "GCP · IAM · VPC-SC"
 
 availability: "Open to selected work"
 
 accent:
-  dark: "#22D3EE"
-  light: "#0E7490"
+  dark: "#C98A4B"
+  light: "#A85A2A"
