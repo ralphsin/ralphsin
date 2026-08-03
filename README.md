@@ -12,7 +12,7 @@
 
 I help fintech and enterprise teams design, migrate and ship production systems on GCP — combining platform engineering, data systems and applied AI.
 
-[**Discuss an engagement**](mailto:ralphsin@gmail.com?subject=Engineering%20engagement) · [Selected systems](#selected-systems) · [LinkedIn](https://linkedin.com/in/rakesh-singh09)
+[![Discuss an engagement](https://img.shields.io/badge/Discuss%20an%20engagement-C98A4B?style=flat-square)](mailto:ralphsin@gmail.com?subject=Engineering%20engagement) [![Selected systems](https://img.shields.io/badge/Selected%20systems-7FA3C9?style=flat-square)](#selected-systems) [![LinkedIn](https://img.shields.io/badge/LinkedIn-C98A4B?style=flat-square)](https://linkedin.com/in/rakesh-singh09)
 
 > **18+ years** in production engineering · **Up to 95%** less deployment effort · **$15M+** cost savings delivered
 
